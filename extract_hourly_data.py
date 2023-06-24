@@ -23,4 +23,4 @@ for file in sorted(raw_dir.glob("*.txt")):
         print(f"Couldn't parse file {file}")
     
 all_data = pd.concat(daily_data, ignore_index=True)
-all_data.to_csv("CA_daily_renawables.csv")
+all_data.to_csv("CA_daily_renawables.csv", index=False)
