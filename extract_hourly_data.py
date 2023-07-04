@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 from datetime import datetime, timedelta
 
-raw_dir = Path("CA_daily_renewables")
+raw_dir = Path("data/CA_daily_renewables")
 
 daily_data = []
 for file in sorted(raw_dir.glob("*.txt")):
@@ -23,4 +23,4 @@ for file in sorted(raw_dir.glob("*.txt")):
         print(f"Couldn't parse file {file}")
     
 all_data = pd.concat(daily_data, ignore_index=True)
-all_data.to_csv("CA_daily_renewables.csv", index=False)
+all_data.to_csv("data/CA_daily_renewables.csv", index=False)

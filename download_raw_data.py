@@ -11,7 +11,7 @@ from pathlib import Path
 start_date = datetime(year=2018, month=6, day=1)
 end_date = datetime(year=2021, month=5, day=31)
 
-out_path = Path("CA_daily_renewables")
+out_path = Path("data/CA_daily_renewables")
 skipped_dates = []
 date = start_date
 with tqdm(total=(end_date-start_date).days) as pbar:
